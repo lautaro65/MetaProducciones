@@ -172,7 +172,7 @@ export default function EventWebsite() {
             playsInline
             aria-label="Video de fondo mostrando eventos de Meta Producciones"
           >
-            <source src="YOUR_VIDEO_URL_HERE.mp4" type="video/mp4" />
+            <source src="Meta-Producciones-SHORT-HD-1080p.mov" type="video/mp4" />
             <track kind="captions" src="/captions.vtt" srcLang="es" label="Español" default />
           </video>
           <div className="absolute inset-0 bg-black/50"></div>
@@ -849,30 +849,31 @@ export default function EventWebsite() {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
+     {/* Contact Section - Changed to red theme */}
       <section
         id="contacto"
         className="bg-gradient-to-r from-red-700 to-red-900 text-white py-20"
-        aria-labelledby="contacto-title"
       >
         <div className="container mx-auto px-4">
-          <h2 id="contacto-title" className="text-4xl font-bold text-center mb-16">
+          <h2 className="text-4xl font-bold text-center mb-16">
             Hablemos de tu próximo evento
           </h2>
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6" aria-hidden="true" />
+                <Phone className="w-6 h-6" />
                 <div>
                   <h3 className="font-semibold">Teléfono</h3>
-                  <a href="tel:+5493512543913" className="text-red-100 hover:text-white transition-colors">
+                  <a
+                    href="tel:+5493512543913"
+                    className="text-red-100 hover:text-white transition-colors"
+                  >
                     +54 9 351 254-3913
                   </a>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <Mail className="w-6 h-6" aria-hidden="true" />
+                <Mail className="w-6 h-6" />
                 <div>
                   <h3 className="font-semibold">Email General</h3>
                   <a
@@ -884,7 +885,7 @@ export default function EventWebsite() {
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <Mail className="w-6 h-6" aria-hidden="true" />
+                <Mail className="w-6 h-6" />
                 <div>
                   <h3 className="font-semibold">Administración</h3>
                   <a
@@ -896,7 +897,7 @@ export default function EventWebsite() {
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <Mail className="w-6 h-6" aria-hidden="true" />
+                <Mail className="w-6 h-6" />
                 <div>
                   <h3 className="font-semibold">Eventos</h3>
                   <a
@@ -908,7 +909,7 @@ export default function EventWebsite() {
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <MapPin className="w-6 h-6" aria-hidden="true" />
+                <MapPin className="w-6 h-6" />
                 <div>
                   <h3 className="font-semibold">Ubicación</h3>
                   <p className="text-red-100">Córdoba, Argentina</p>
@@ -917,39 +918,33 @@ export default function EventWebsite() {
             </div>
 
             <div className="lg:col-span-2">
-              <Card className="bg-white border-gray-200">
+              <Card className="bg-white/15 backdrop-blur border-white/30">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-gray-800">Solicita tu cotización</h3>
-                  <form className="space-y-4" aria-label="Formulario de cotización">
+                  <h3 className="text-xl font-semibold mb-4 text-white">
+                    Solicita tu cotización
+                  </h3>
+                  <form className="space-y-4">
                     <div className="grid md:grid-cols-2 gap-4">
                       <Input
                         placeholder="Nombre completo"
-                        className="bg-white border-gray-300 text-gray-800 placeholder:text-gray-500"
-                        aria-label="Nombre completo"
-                        required
+                        className="bg-white/15 border-white/30 text-white placeholder:text-white/80"
                       />
                       <Input
                         placeholder="Email"
                         type="email"
-                        className="bg-white border-gray-300 text-gray-800 placeholder:text-gray-500"
-                        aria-label="Correo electrónico"
-                        required
+                        className="bg-white/15 border-white/30 text-white placeholder:text-white/80"
                       />
                     </div>
                     <Input
                       placeholder="Tipo de evento"
-                      className="bg-white border-gray-300 text-gray-800 placeholder:text-gray-500"
-                      aria-label="Tipo de evento"
-                      required
+                      className="bg-white/15 border-white/30 text-white placeholder:text-white/80"
                     />
                     <Textarea
                       placeholder="Cuéntanos sobre tu evento..."
-                      className="bg-white border-gray-300 text-gray-800 placeholder:text-gray-500"
+                      className="bg-white/15 border-white/30 text-white placeholder:text-white/80"
                       rows={4}
-                      aria-label="Descripción del evento"
-                      required
                     />
-                    <Button className="w-full bg-red-600 text-white hover:bg-red-700 font-semibold" type="submit">
+                    <Button className="w-full bg-white text-red-700 hover:bg-red-50 font-semibold">
                       Enviar Solicitud
                     </Button>
                   </form>
